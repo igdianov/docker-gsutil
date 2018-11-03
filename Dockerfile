@@ -18,6 +18,8 @@ RUN apk add --update \
     openssl-dev \
   && pip install gsutil \
   && apk del build-deps \
+  && apk add curl make \
   && rm -rf /var/cache/apk/*
 
 CMD ["gsutil"]
+
